@@ -1,4 +1,4 @@
-// @ts-check
+﻿// @ts-check
 require('dotenv').config()
 
 const lightCodeTheme = require('prism-react-renderer/themes/github')
@@ -8,29 +8,29 @@ const remarkPluginNpm2yarn = require('@docusaurus/remark-plugin-npm2yarn')
 
 /** @type {import('@docusaurus/types').Config} */
 module.exports = {
-  // 自定义字段
+  // è‡ªå®šä¹‰å­—æ®µ
   customFields: {
     apiBaseUrl: process.env.API_BASE_URL
   },
   // eslint-disable-next-line quotes
   title: "Bruce's Wiki",
-  tagline: '信じて諦めなければ、夢は必ずかなう',
-  url: 'https://wiki.bruceworld.top/',
-  baseUrl: '/',
+  tagline: 'ä¿¡ã˜ã¦è«¦ã‚ãªã‘ã‚Œã°ã€å¤¢ã¯å¿…ãšã‹ãªã†',
+  url: 'https://rokkiz.github.io',
+  baseUrl: '/harry-tran-portfolio/',
   baseUrlIssueBanner: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon/favicon.png',
-  organizationName: 'Bruce Song',
-  projectName: 'wiki',
+  organizationName: 'rokkiz',
+  projectName: 'harry-tran-portfolio',
 
-  // 主题
+  // ä¸»é¢˜
   themes: ['@docusaurus/theme-live-codeblock'],
 
-  // 插件
+  // æ’ä»¶
   plugins: ['docusaurus-plugin-sass'],
 
-  // 预设
+  // é¢„è®¾
   presets: [
     [
       'classic',
@@ -66,7 +66,7 @@ module.exports = {
     ]
   ],
 
-  // 主题配置
+  // ä¸»é¢˜é…ç½®
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -82,9 +82,9 @@ module.exports = {
         isCloseable: true
       },
       navbar: {
-        title: 'Bruce の Wiki',
+        title: 'Bruce ã® Wiki',
         logo: {
-          alt: 'Bruce の Wiki',
+          alt: 'Bruce ã® Wiki',
           src: 'img/favicon/favicon.png',
           srcDark: 'img/favicon/favicon.png',
           target: '_self',
@@ -138,7 +138,7 @@ module.exports = {
         },
         style: 'light', // "light" | "dark"
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Bruce. Built with Docusaurus. Hosted by Vercel.`
+        copyright: `Copyright Â© ${new Date().getFullYear()} Bruce. Built with Docusaurus. Hosted by Vercel.`
       },
       tableOfContents: {
         minHeadingLevel: 2,
@@ -173,3 +173,4 @@ module.exports = {
       }
     })
 }
+
