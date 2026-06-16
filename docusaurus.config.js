@@ -93,31 +93,35 @@ module.exports = {
         hideOnScroll: false,
         items: [
           {
-            type: 'docSidebar',
-            label: 'JavaScript',
-            sidebarId: 'javascript'
+            to: '/hobbies',
+            label: 'My Hobbies',
+            position: 'left'
           },
           {
-            type: 'docSidebar',
-            label: 'Visual Studio Code',
-            sidebarId: 'visualStudioCode'
+            to: '/learning',
+            label: 'Learning',
+            position: 'left'
           },
           {
-            type: 'docSidebar',
-            label: 'Algorithm',
-            sidebarId: 'algorithm'
+            to: '/finance',
+            label: 'Personal Finance',
+            position: 'left'
           },
-          // { type: "localeDropdown", position: "right" },
+          {
+            to: '/about',
+            label: 'About me',
+            position: 'left'
+          },
           {
             type: 'search',
             position: 'right',
-            className: 'navbar-search' // Defined in style/custom.scss
+            className: 'navbar-search'
           },
           {
             href: 'https://github.com/recallwei/',
             position: 'right',
-            className: 'header-github-icon', // Defined in style/custom.scss
-            title: '前往 Bruce Song 的 GitHub 主页',
+            className: 'header-github-icon',
+            title: 'GitHub',
             'aria-label': 'GitHub repository'
           }
         ]

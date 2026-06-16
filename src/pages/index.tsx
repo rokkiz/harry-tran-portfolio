@@ -72,83 +72,24 @@ export default function Home(): JSX.Element {
 
 function HomepageHeader({ isMobileDevice }: HomepageHeaderProps): JSX.Element {
   const { siteConfig } = useDocusaurusContext()
-  const BRUCE = 'Bruce Song'
-  const TO_WIKI_BUTTON_TEXT = 'Go to Wiki'
-  const COPY_SUCCESS = '已复制到剪切板'
-  const [show, setShow] = useState<boolean>(false)
-
-  const copySuccess = (): void => {
-    setShow(true)
-    if (!show) {
-      setTimeout(() => {
-        setShow(false)
-      }, 4000)
-    }
-  }
+  const TITLE_PART_1 = 'LEARN'
+  const TITLE_PART_2 = 'STUFF'
+  const TITLE_PART_3 = 'FROM A'
+  const TITLE_PART_4 = 'PRO'
 
   return (
     <header className={clsx(styles.heroBanner)}>
       <div className={clsx(styles.heroTextContainer)}>
-        {!isMobileDevice && (
-          <div className={styles.avatarArea}>
-            <img
-              src={favicon}
-              alt="Bruce"
-            />
-          </div>
-        )}
         <div className={styles.heroTextArea}>
-          <p className={styles.heroTextTitle}>{BRUCE}</p>
-          <p className={styles.heroTextSubTitle}>{siteConfig.tagline}</p>
-          <div className={styles.heroTextAreaButton}>
-            <Link
-              className={clsx(
-                'button',
-                'button--secondary',
-                'button--sm',
-                styles.heroTextAreaButton
-              )}
-              to="/docs/javascript"
-            >
-              {TO_WIKI_BUTTON_TEXT}
-            </Link>
+          <div className={styles.heroTitleContainer}>
+            <span className={styles.heroTitleSolid}>{TITLE_PART_1}</span>
+            <span className={styles.heroTitleHollow}>{TITLE_PART_2}</span>
           </div>
-        </div>
-        <div className={styles.navLinkIconArea}>
-          <ContactMeBtn
-            title={contactMeData.github}
-            src={github}
-            link={contactMeData.githubLink}
-          />
-          <ContactMeBtn
-            title={contactMeData.telegram}
-            src={telegram}
-            link={contactMeData.telegramLink}
-          />
-          <ContactMeBtn
-            title={contactMeData.gmail}
-            src={gmail}
-            link={contactMeData.gmailAddress}
-            isCopyBtn
-            copySuccess={copySuccess}
-          />
-          <ContactMeBtn
-            title={contactMeData.twitter}
-            src={twitter}
-            link="/"
-          />
-          <ContactMeBtn
-            title={contactMeData.wechat}
-            src={wechat}
-            link={contactMeData.wechatAccount}
-            isCopyBtn
-            copySuccess={copySuccess}
-          />
-          <ContactMeBtn
-            title={contactMeData.zhihu}
-            src={zhihu}
-            link="/"
-          />
+          <div className={styles.heroTitleContainer}>
+            <span className={styles.heroTitleSolid}>{TITLE_PART_3}</span>
+            <span className={styles.heroTitleHollow}>{TITLE_PART_4}</span>
+          </div>
+          <p className={styles.heroTextSubTitle}>{siteConfig.tagline}</p>
         </div>
         {!isMobileDevice && (
           <>
@@ -156,11 +97,6 @@ function HomepageHeader({ isMobileDevice }: HomepageHeaderProps): JSX.Element {
             <PageProgressBar />
           </>
         )}
-        <Notification
-          show={show}
-          title={COPY_SUCCESS}
-          changeShow={setShow}
-        />
       </div>
     </header>
   )

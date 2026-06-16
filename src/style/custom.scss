@@ -53,3 +53,36 @@ div[class^="announcementBar_"] {
   );
   font-weight: 600;
 }
+
+// Navbar: always visible with solid background
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+
+  .navbar__brand,
+  .navbar__title,
+  .navbar__link {
+    color: #1c1e21 !important;
+  }
+
+  .navbar__link:hover,
+  .navbar__link--active {
+    color: #25c2a0 !important;
+  }
+}
+
+[data-theme="dark"] .navbar {
+  background-color: #1b1b1d !important;
+
+  .navbar__brand,
+  .navbar__title,
+  .navbar__link {
+    color: #e3e3e3 !important;
+  }
+
+  .navbar__link:hover,
+  .navbar__link--active {
+    color: #25c2a0 !important;
+  }
+}
+

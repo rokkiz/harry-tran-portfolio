@@ -2,25 +2,49 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   background-position: center;
   background-size: cover;
-  background-image: url("/static/img/background/home_background.jpeg");
-  background-color: var(--ifm-hero-background-color);
-  color: var(--ifm-hero-text-color);
-  height: 30vh;
+  background-image: url("/img/hero_background.png");
+  background-attachment: fixed;
+  color: white;
+  height: 100vh;
+  width: 100%;
 }
 
 .heroTextContainer {
   margin: 0 auto;
-  max-width: var(--ifm-container-width);
-  min-width: fit-content;
+  max-width: 1200px;
+  width: 100%;
   padding: 0 var(--ifm-spacing-horizontal);
+  z-index: 10;
 }
 
 .heroTextArea {
   color: white;
-  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.heroTitleContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.heroTitleSolid {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+}
+
+.heroTitleHollow {
+  font-size: 3rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
 }
 
 .heroTextTitle {
@@ -222,8 +246,17 @@
     height: 100vh;
   }
 
+  .heroTitleSolid {
+    font-size: 5rem;
+  }
+
+  .heroTitleHollow {
+    font-size: 5rem;
+    -webkit-text-stroke: 1px white;
+  }
+
   .heroTextContainer {
-    width: 38%;
+    width: 100%;
   }
 
   .avatarArea > img {
@@ -250,11 +283,8 @@
   }
 
   .heroTextArea {
-    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 1rem;
     letter-spacing: 0;
-    white-space: nowrap;
     margin-bottom: 0;
   }
 
@@ -351,3 +381,15 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+@media screen and (min-width: 996px) {
+  .heroTitleSolid {
+    font-size: 10rem;
+  }
+
+  .heroTitleHollow {
+    font-size: 10rem;
+    -webkit-text-stroke: 2px white;
+  }
+}
+
