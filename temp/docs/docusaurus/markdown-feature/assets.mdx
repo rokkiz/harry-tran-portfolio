@@ -1,0 +1,37 @@
+---
+title: 静态资源
+---
+
+import ThemedImage from "@theme/ThemedImage";
+
+## 主题化图片
+
+Docusaurus 提供 `ThemedImage` 组件来支持主题化图片。
+
+```jsx {1,5,6} showLineNumbers title="JavaScript"
+import ThemedImage from "@theme/ThemedImage";
+
+<ThemedImage
+  sources={{
+    light: require("@site/static/img/sample/batman_grey.png").default,
+    dark: require("@site/static/img/sample/batman_yellow.png").default,
+  }}
+  alt="Batman"
+  loading="lazy"
+  width="128px"
+  height="128px"
+/>;
+```
+
+点击切换主题按钮，切换到暗黑模式，来查看如下图片的变化：
+
+<ThemedImage
+  sources={{
+    light: require("@site/static/img/sample/batman_grey.png").default,
+    dark: require("@site/static/img/sample/batman_yellow.png").default,
+  }}
+  alt="Batman"
+  loading="lazy"
+  width="128px"
+  height="128px"
+/>

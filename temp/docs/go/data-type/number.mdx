@@ -1,0 +1,61 @@
+---
+title: Number
+---
+
+## 整型
+
+整型的关键字为 **int**，但 Go 还提供了 **int8**、 **int16**、 **int32** 和 **int64** 类型，后面的数字代表其大小的位数。
+
+Go 也提供了无符号整数类型（**unsigned integer**）如 **uint8**、 **uint16**、 **uint32**、 **uint64**。
+
+:::caution 注意
+声明一个无符号整型，并用一个负值（例如 -10）初始化，会出现错误：**constant -10 overflows uint**。
+:::
+
+需要强制转换时，需要进行显式转换。 如果尝试在不同类型之间执行数学运算（如 int + int32），将会出现错误。
+
+```go title="Go"
+var integer16 int16 = 127
+var integer32 int32 = 32767
+fmt.Println(integer16 + integer32)
+```
+
+```bash title="错误信息"
+invalid operation: integer16 + integer32 (mismatched types int16 and int32)
+```
+
+### Rune
+
+Rune 实质上就是 int32 类型，可以用其找到字符串对应的 Unicode 字符。
+
+```go title="Go"
+rune := 'G'
+fmt.Println(rune) // expected: 71
+
+getRuneArr("ABC") // expected: [65 66 67]
+
+func getRuneArr(str string) {
+	rune := []rune(str)
+	fmt.Println(rune)
+}
+```
+
+## 浮点型
+
+Go 提供两种浮点数大小的数据类型：**float32** 和 **float64**。
+
+### 获取浮点型边界值
+
+使用 **math** 包中提供的 `math.MaxFloat32`、 `math.MaxFloat64`、 `math.SmallestNonzeroFloat32`、 `math.SmallestNonzeroFloat64` 常量来查找这两种类型的限制：
+
+```go title="Go"
+func getFloatMaxValue() {
+	fmt.Println(math.MaxFloat32, math.MaxFloat64, math.SmallestNonzeroFloat32, math.SmallestNonzeroFloat64)
+}
+```
+
+## 字符串
+
+## 默认值
+
+## 类型转换

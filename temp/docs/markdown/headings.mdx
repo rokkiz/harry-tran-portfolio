@@ -1,0 +1,56 @@
+---
+title: "标题"
+description: ""
+tags:
+  - label: "Markdown"
+    permalink: "markdown"
+last_update:
+  date: 2022-07-10
+  author: "Bruce"
+---
+
+import TH from "@site/src/components/TextHighlight/index";
+import Table from "@site/src/components/Table/index";
+
+## Markdown 语法
+
+```markdown title="Markdown"
+# 标题 1
+
+## 标题 2
+
+### 标题 3
+
+#### 标题 4
+
+##### 标题 5
+
+###### 标题 6
+```
+
+## HTML 语法
+
+```markdown title="Markdown"
+<h1>标题 1</h1>
+<h2>标题 2</h2>
+<h3>标题 3</h3>
+<h4>标题 4</h4>
+<h5>标题 5</h5>
+<h6>标题 6</h6>
+```
+
+## 最佳实践
+
+为了兼容性, 我们需要在数字符号 `(#)` 和标题间添加一个<TH>空格</TH>。
+
+<Table
+  wrapperStyle={{ width: "50%" }}
+  data={{
+    position: ["center", "center"],
+    header: ["✅", "🔴"],
+    body: [
+      [<code># heading</code>, <code>#heading</code>],
+      [<code>## heading</code>, <code>##heading</code>],
+    ],
+  }}
+/>

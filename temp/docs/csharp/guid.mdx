@@ -1,0 +1,61 @@
+---
+title: "GUID"
+description: "C# GUID"
+tags:
+  - label: "C#"
+    permalink: "csharp"
+  - label: "GUID"
+    permalink: "guid"
+last_update:
+  date: "2022-07-10"
+  author: "Bruce"
+---
+
+import TH from "@site/src/components/TextHighlight/index";
+import ReferenceList from "@site/src/components/ReferenceList";
+import wikipedia from "@site/static/img/reference/wikipedia.png";
+import microsoft from "@site/static/img/icon/microsoft.png";
+
+## 什么是 GUID
+
+**GUID** 即全球唯一的标识符（globally unique identifier），也称 **UUID**（universal unique identifier） ，是一种 16 字节或 128 位数字。目的是唯一地标识某些东西，其在表、数据库和服务器之间是<TH>全球唯一</TH>的。
+
+## 格式
+
+**xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx**
+
+例：69121893-3AFC-4F92-85F3-40BB5E7C7E29
+
+## 在 C# 中创建 GUID
+
+使用 `Guid.NewGuid()` 方法在 C# 中生成一个新的 GUID：
+
+```csharp title="C#"
+using System;
+namespace GUIDTest {
+    class MainClass {
+        static void Main(string[] args) {
+            Guid guid = System.Guid.NewGuid();
+            Console.WriteLine(guid); // expected: 0f8fad5b-d9cb-469f-a165-70867728950e
+            Console.WriteLine(Guid.NewGuid()); // expected: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+        }
+    }
+}
+```
+
+## 参考
+
+<ReferenceList
+  data={[
+    {
+      title: "Wikipedia : Universally unique identifier",
+      link: "https://en.wikipedia.org/wiki/Universally_unique_identifier",
+      src: wikipedia,
+    },
+    {
+      title: "Microsoft Docs : GUID",
+      link: "https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-6.0",
+      src: microsoft,
+    },
+  ]}
+/>

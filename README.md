@@ -2,12 +2,30 @@
 
 Welcome to my personal portfolio repository! 
 
-This repository will contain the source code for my professional portfolio website, showcasing my projects, skills, and experience as a software developer.
+This repository contains the source code for my professional portfolio website, showcasing my projects, skills, and experience as a software developer.
 
-## Tech Stack (Planned)
-- HTML5
-- CSS3 (Vanilla Custom Themes)
-- JavaScript (ES6+)
+## Tech Stack
+- React
+- TypeScript
+- Docusaurus
+- Sass / Custom CSS
 
-## Project Status
-Initializing repository...
+## Usage
+
+### Install
+
+```bash
+npm install
+```
+
+### Start Local Development Server
+
+```bash
+npm run dev
+```
+
+### Build Production Bundle
+
+```bash
+npm run build
+```

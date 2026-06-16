@@ -1,0 +1,74 @@
+---
+title: "Markdown"
+hide_title: true
+description: ""
+tags:
+  - label: "Markdown"
+    permalink: "markdown"
+last_update:
+  date: "2022-07-10"
+  author: "Bruce"
+---
+
+import FeatureIcon from "@site/src/components/FeatureIcon";
+import LinkList from "@site/src/components/LinkList";
+import markdown from "@site/static/img/icon/markdown.png";
+import markdown_dark from "@site/static/img/icon-dark-mode/markdown_dark.png";
+import html from "@site/static/img/icon/html.png";
+import MDX from "@site/static/img/icon/mdx.png";
+import mdx_dark from "@site/static/img/icon-dark-mode/mdx_dark.png";
+import ReferenceList from "@site/src/components/ReferenceList";
+
+<FeatureIcon src={markdown} srcDark={markdown_dark} title="Markdown" />
+<LinkList
+  data={[
+    {
+      title: "嵌入 HTML",
+      link: "/docs/markdown/embed-html",
+      src: html,
+    },
+    {
+      title: "标题",
+      link: "/docs/markdown/headings",
+      src: markdown,
+      srcDark: markdown_dark,
+    },
+    {
+      title: "段落",
+      link: "/docs/markdown/paragraphs",
+      src: markdown,
+      srcDark: markdown_dark,
+    },
+    {
+      title: "换行",
+      link: "/docs/markdown/line-breaks",
+      src: markdown,
+      srcDark: markdown_dark,
+    },
+  ]}
+/>
+
+## 参考
+
+<ReferenceList
+  data={[
+    {
+      title: "Markdown Guide",
+      link: "https://www.markdownguide.org/",
+      src: markdown,
+      srcDark: markdown_dark,
+    },
+    {
+      title: "MDX.js",
+      link: "https://mdxjs.com/",
+      src: MDX,
+      srcDark: mdx_dark,
+    },
+    {
+      title: "MDX",
+      link: "https://mdx-git-renovate-babel-monorepo-mdx.vercel.app/",
+      src: MDX,
+      srcDark: mdx_dark,
+    },
+  ]}
+/>
