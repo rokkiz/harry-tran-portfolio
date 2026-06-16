@@ -112,11 +112,7 @@ module.exports = {
             label: 'About me',
             position: 'left'
           },
-          {
-            type: 'search',
-            position: 'right',
-            className: 'navbar-search'
-          },
+
           {
             href: 'https://github.com/recallwei/',
             position: 'right',
@@ -169,15 +165,9 @@ module.exports = {
           'docker'
         ]
       },
-      algolia: {
-        appId: '2MFWID6114',
-        apiKey: '73035bd8b4198d6a191e424ced0b641b',
-        indexName: 'bruce-wiki',
-        contextualSearch: false,
-        externalUrlRegex: 'external\\.com|domain\\.com',
-        searchParameters: {},
-        searchPagePath: 'search'
-      },
+      // algolia search removed - credentials from original repo don't apply here
+      // and @docusaurus/theme-search-algolia@3.10.1 has a bug with useDocsPreferredVersionContext
+      // Add your own Algolia credentials here when ready
       liveCodeBlock: {
         playgroundPosition: 'bottom'
       }
