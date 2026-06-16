@@ -1,38 +1,31 @@
-# Bruce Wiki
+# Harry Tran - Portfolio
 
-My personal Wiki for recording Web development knowledge.
+Welcome to my personal portfolio repository! 
+
+This repository contains the source code for my professional portfolio website, showcasing my projects, skills, and experience as a software developer.
 
 ## Tech Stack
-
 - React
 - TypeScript
 - Docusaurus
+- Sass / Custom CSS
 
 ## Usage
 
 ### Install
 
 ```bash
-pnpm i
+npm install
 ```
 
-### Start
+### Start Local Development Server
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
-### Build
+### Build Production Bundle
 
 ```bash
-pnpm build
+npm run build
 ```
-
-## Others
-
-- Host by Vercel
-- UI design inspired by Notion
-
-## License
-
-[MIT](/LICENSE) License &copy; 2023 [Bruce Song](https://github.com/recallwei)
