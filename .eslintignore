@@ -1,9 +1,0 @@
-build
-dist
-node_modules
-.docusaurus
-.husky
-.next
-.vscode
-.docusaurus.config.js
-

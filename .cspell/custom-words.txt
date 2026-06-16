@@ -1,8 +1,0 @@
-aspnet
-changefreq
-clsx
-commitlint
-fira
-hideable
-leetcode
-stylelint
