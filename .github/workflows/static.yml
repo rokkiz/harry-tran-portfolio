@@ -28,9 +28,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_RUNNER_DEBUG: true
-      ACTIONS_STEP_DEBUG: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,6 +47,15 @@ jobs:
 
       - name: Build Docusaurus site
         run: pnpm build
+
+      - name: Debug - Check build output
+        run: |
+          echo "=== Current directory ==="
+          pwd
+          echo "=== Contents of build directory ==="
+          ls -la build/ || echo "build directory not found"
+          echo "=== File count ==="
+          find build -type f | wc -l || echo "error counting files"
 
       - name: Prepare publish directory
         run: |
