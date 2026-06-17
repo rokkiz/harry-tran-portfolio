@@ -48,6 +48,15 @@ jobs:
       - name: Build Docusaurus site
         run: pnpm build
 
+      - name: Prepare publish directory
+        run: |
+          # If Docusaurus outputs to build/<projectName>, move files to build root
+          if [ -d "build/harry-tran-portfolio" ]; then
+            shopt -s dotglob || true
+            mv build/harry-tran-portfolio/* build/ || true
+            rm -rf build/harry-tran-portfolio || true
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
